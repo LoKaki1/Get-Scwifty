@@ -6,7 +6,10 @@ class GameGrid extends GridBase{
     }
 
     MixGrid() {
-
+        this.cells = []
+        for (let i = 0; i < length; i++) {
+            this.cells.push
+        }
     }
 
     SwapWithEmptyCell(cell) {
