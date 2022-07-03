@@ -1,5 +1,5 @@
-import { CreateRandomCellFactory }  from '../Common/GridCommon/CreateRandomCellFactory'
-import { GameGrid } from '../BL/Grid/GameGrid'
+import { CreateRandomCellFactory }  from '../Common/GridCommon/CreateRandomCellFactory.js'
+import { GameGrid } from '../BL/Grid/GameGrid.js'
 
 export class bootstrapper {
     init() {

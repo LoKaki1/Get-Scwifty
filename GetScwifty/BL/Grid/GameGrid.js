@@ -1,13 +1,16 @@
+import { GridBase }from '../../Common/GridCommon/GridBase.js'
+
 export class GameGrid extends GridBase {
 
     constructor (length, cellsFactory) {
         super(length)
         this.emptyCell = null
         this.cellsFactory = cellsFactory
+
     }
 
     MixCells() {
-        let cells = this.cellsFactory.CreateRandomCell(this.length * this.length - 1)
+        let cells = this.cellsFactory.CreateRandomCell(this)
         for (let i in cells) {
             this.cells[i.x][i.y] = i.value
         }
@@ -34,5 +37,8 @@ export class GameGrid extends GridBase {
 
     SwapWithEmptyCell(cell) {
         this.SwapCells(cell, this.emptyCell)
+    }
+    GetCells(){
+        return this.cells
     }
 }
