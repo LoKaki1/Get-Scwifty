@@ -7,9 +7,9 @@ class GameGrid extends GridBase {
     }
 
     MixGrid() {
-        let cells = this.cellsFactory.CreateRandomCell(length * length - 1)
-        for (let i = 0; i < length; i++) {
-            this.cells.push
+        let cells = this.cellsFactory.CreateRandomCell(this.length * this.length - 1)
+        for (let i in cells) {
+            this.cells[i.x][i.y] = i.value
         }
     }
 
