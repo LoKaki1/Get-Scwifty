@@ -1,4 +1,4 @@
-class GameGrid extends GridBase{
+class GameGrid extends GridBase {
 
     constructor (length) {
         super(length)

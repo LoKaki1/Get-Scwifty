@@ -1,0 +1,5 @@
+class CreateRandomCellFactory {
+    CreateRandomCell (cellGrid) {
+        
+    }
+}
