@@ -1,4 +1,4 @@
-class cellBase {
+export class cellBase {
     constructor (x, y, value) {
         this.x = x
         this.y = y

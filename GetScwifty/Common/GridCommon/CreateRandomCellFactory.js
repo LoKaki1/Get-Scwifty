@@ -1,4 +1,4 @@
-class CreateRandomCellFactory {
+export class CreateRandomCellFactory {
     
     CreateRandomCell (grid) {
         let cells = []

@@ -1,5 +1,5 @@
 const EMPTY_CELL = 'EMPTY'
-class GridBase {
+export class GridBase {
     constructor(length) {
         this.emptyCellValue = EMPTY_CELL
         this.length = length

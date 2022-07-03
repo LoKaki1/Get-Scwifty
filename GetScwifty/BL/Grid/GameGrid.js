@@ -1,4 +1,4 @@
-class GameGrid extends GridBase {
+export class GameGrid extends GridBase {
 
     constructor (length, cellsFactory) {
         super(length)
