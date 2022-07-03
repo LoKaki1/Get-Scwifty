@@ -6,11 +6,20 @@ class GameGrid extends GridBase {
         this.cellsFactory = cellsFactory
     }
 
-    MixGrid() {
+    MixCells() {
         let cells = this.cellsFactory.CreateRandomCell(this.length * this.length - 1)
         for (let i in cells) {
             this.cells[i.x][i.y] = i.value
         }
+    }
+    MixGrid() {
+
+    }
+
+    EmptyCell() {
+        x, y = Math.floor(Math.random() * this.length) + 1, Math.floor(Math.random() * this.length) + 1
+        
+
     }
 
     SwapWithEmptyCell(cell) {

@@ -3,11 +3,16 @@ class CreateRandomCellFactory {
     CreateRandomCell (grid) {
         let cells = []
         let x, y = (0, 0)
-        while(cells.length < numberOfCells) {
+        while(cells.length < numberOfCells - 1) {
             let cellValue = Math.floor(Math.random() * numberOfCells) + 1;
             if(cells.indexOf(cellValue) === -1) {
-                x +
-                cells.push(cellValue)
+                let cell = new cellBase(x, y, cellValue)
+                cells.push(cell)
+                x += 1
+                if (x >= grid.length){
+                    x = 0
+                    y += 1
+                }
             } 
         }
         return cells
