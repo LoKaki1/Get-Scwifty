@@ -1,28 +1,26 @@
 import { GridBase } from '../../Common/GridCommon/GridBase.js'
 import { cellBase } from '../../Common/GridCommon/cellbase.js'
 import { GridMixer } from './GridMixer.js'
+import { GridSwapper } from './GridSwapper.js'
 export class GameGrid extends GridBase {
 
     constructor (length, cellsFactory) {
         super(length)
-        this.emptyCell = null
+        this.emptyCell = new cellBase(length - 1, length - 1, this.emptyCellValue)
         this.gridMixer = new GridMixer(cellsFactory, this)
+        this.gridSwapper = new GridSwapper(this)
+        this.cellsFactory = cellsFactory
     }
 
-    Start() {
+    StartGrid() {
         this.gridMixer.MixGrid()
+        this.StartEmptyCell()
     }
     
-    SwapCells(cell1, cell2) {
-        console.log(cell1, cell2)
-        this.cells[cell1.x][cell1.y] = cell2
-        this.cells[cell2.x][cell2.y] = cell1
-        cell1.x = [cell2.x, cell2.x = cell1.x][0]
-        cell1.y = [cell2.y, cell2.y = cell1.y][0]
-    }
-
-    SwapWithEmptyCell(cell) {
-        this.SwapCells(cell, this.emptyCell)
+    StartEmptyCell() {
+        let generatedCell = this.cellsFactory.RandomCell(this)
+        this.gridSwapper.SwapWithEmptyCell(this.cells[generatedCell.x][generatedCell.y])
+        console.log(this.emptyCell.x, this.emptyCell.y)
     }
     GetCells(){
         return this.cells
