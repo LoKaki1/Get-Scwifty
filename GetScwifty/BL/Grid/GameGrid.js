@@ -31,10 +31,11 @@ export class GameGrid extends GridBase {
     
     SwapCells(cell1, cell2) {
         console.log(cell1, cell2)
+        //b = [a, a = b][0];
         this.cells[cell1.x][cell1.y] = cell2
         this.cells[cell2.x][cell2.y] = cell1
-        [cell1.x, cell2.x] = [cell2.x, cell1.x]
-        [cell1.y, cell2.y] = [cell2.y, cell1.y]
+        cell1.x = [cell2.x, cell2.x = cell1.x][0]
+        cell1.y = [cell2.y, cell2.y = cell1.y][0]
     }
 
     SwapWithEmptyCell(cell) {
