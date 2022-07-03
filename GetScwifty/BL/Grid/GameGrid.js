@@ -1,12 +1,13 @@
 class GameGrid extends GridBase {
 
-    constructor (length) {
+    constructor (length, cellsFactory) {
         super(length)
-        this.emptyCell = null
+        this.emptyCell = null,
+        this.cellsFactory = cellsFactory
     }
 
     MixGrid() {
-        this.cells = []
+        let cells = this.cellsFactory.CreateRandomCell(length * length - 1)
         for (let i = 0; i < length; i++) {
             this.cells.push
         }
