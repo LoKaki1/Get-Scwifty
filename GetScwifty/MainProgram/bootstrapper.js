@@ -1,8 +1,5 @@
 import { CellFactory }  from '../Common/GridCommon/CreateRandomCellFactory.js'
-import { GameGrid } from '../BL/Grid/GameGrid.js'
-import { GridController } from '../UI/Grid/GridController.js'
-import { GridView } from '../HtmlUI/Grid/GridView.js'
-import { GameLogic } from '../BL/GameLogic.js'
+import { GridController } from '../ViewController/Grid/GridController.js'
 import { Starter } from '../HtmlUI/Grid/Starter.js'
 import { GameFactory } from '../BL/GameFactory.js'
 

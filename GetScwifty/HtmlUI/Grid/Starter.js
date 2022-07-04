@@ -17,6 +17,7 @@ export class Starter {
     }
 
     Start(grid) {
+        this.gridView.DeleteGrid()
         this.gridView.BuildGrid(grid)
     }
 }
