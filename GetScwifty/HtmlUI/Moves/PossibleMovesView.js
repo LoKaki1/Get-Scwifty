@@ -3,15 +3,15 @@ export class PossibleMovesView {
     constructor() {
         this.grid = document.getElementById('container')
         this.cells = this.grid.children
-
     }
 
-    ViewMoves(moves) {
+    ViewMoves(moves, length) {
         for(let move of moves) {
-            this.cells[(move[0] + 1) * (move[1] + 1) - 1].style.backgroundColor = 'red'
+            this.cells[move[1] * length + move[0]].style.backgroundColor = 'red'
         }
     }
-    AddListenerToCell(cell, event) {
-        this.cells[(cell.x + 1) * (cell.y + 1) - 1].addEventListener('click', event)
+
+    AddListenerToCell(cell, length, event) {
+        this.cells[length * cell.y + cell.x].addEventListener('click', event)
     }
 }

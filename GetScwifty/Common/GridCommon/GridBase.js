@@ -1,4 +1,3 @@
-import { cellBase } from "./cellbase.js"
 const EMPTY_CELL = 'EMPTY'
 export class GridBase {
     constructor(length) {
