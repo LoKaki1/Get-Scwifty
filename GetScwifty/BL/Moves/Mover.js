@@ -10,7 +10,10 @@ export class Mover {
     }
 
     Swap(cell) {
-        console.log(this.gameLogic)
-        this.swapper.SwapWithEmptyCell(this.gameLogic.gameGrid, cell)
+        if (this.possibleMoves.IsMovePossible(cell, this.gameLogic.gameGrid)){
+            this.swapper.SwapWithEmptyCell(this.gameLogic.gameGrid, cell)
+            return true
+        }
+        return false
     }
 }

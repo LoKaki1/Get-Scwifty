@@ -11,15 +11,16 @@ export class MoveViewController {
         for (let cell of cells){ 
             cell.addEventListener('click', () => {
                 this.SwapCellsView(mover, cell)
-                mover.SwapCells({x: cell.value.x, y: cell.value.y})
             })
-            counter ++
+            counter++
         }
     }
 
     SwapCellsView(mover, cell) {
-        mover.SwapCells({x: cell.value.x, y: cell.value.y})
-        this.gridBuilder.RebuildGrid()
+        if(mover.SwapCells({x: cell.value.x, y: cell.value.y})) {
+            this.gridBuilder.RebuildGrid()
+            this.ConnectSwapCells(mover)
+        }
     }
 
 }

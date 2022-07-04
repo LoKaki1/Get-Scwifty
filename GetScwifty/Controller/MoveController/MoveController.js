@@ -5,7 +5,7 @@ export class MoveController {
     }
 
     SwapCells(cell) {
-        this.mover.Swap(cell)
+        return this.mover.Swap(cell)
     }
 
 }
