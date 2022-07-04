@@ -1,15 +1,17 @@
-class GridView {
+export class GridView {
     constructor () {
 
     }
 
     BuildGrid (cells) {
         let container = document.getElementById('container')
-        for (let cellRow in cells) {
-            for (let cell in cellRow) {
+        for (let cellRow of cells) {
+            for (let cell of cellRow) {
                 let htmlCell = document.createElement('div')
+                console.log(cellRow[cell])
                 htmlCell.innerText = cell.value
-                container.appendChild(htmlCell).className('cell-item')
+                htmlCell.className ='cell-item'
+                container.appendChild(htmlCell)
             }
         }
     }
