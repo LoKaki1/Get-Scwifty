@@ -7,7 +7,7 @@ export class GridController {
 
     Start() {
         let baseGrid = this.grid.StartGrid()
-        this.gridView.BuildGrid(baseGrid.cells)
+        this.gridView.BuildGrid(baseGrid)
     }
 
 }
