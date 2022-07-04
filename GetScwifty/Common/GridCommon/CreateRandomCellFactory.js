@@ -13,7 +13,7 @@ export class CellFactory {
         let y = 0
 
         while(cells.length < grid.numberOfCells - 1) {
-            let cellValue = this.cellCreator.randomNumber(2, grid.numberOfCells);
+            let cellValue = this.cellCreator.randomNumber(2, grid.numberOfCells - 1);
             if (this.cellCreator.insertCellIfUniqueValue(cells, cellValues, x, y, cellValue))
             {   
                 x += 1

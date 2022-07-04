@@ -33,6 +33,6 @@ export class GameGrid extends GridBase {
     
     StartEmptyCell() {
         let generatedCell = this.cellsFactory.RandomCell(this)
-        this.gridSwapper.SwapWithEmptyCell(this.cells[generatedCell.x][generatedCell.y])
+        this.gridSwapper.SwapCells(this.cells[generatedCell.x][generatedCell.y], this.emptyCell)
     }
 }
