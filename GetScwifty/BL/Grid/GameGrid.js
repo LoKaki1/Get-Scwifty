@@ -10,9 +10,23 @@ export class GameGrid extends GridBase {
         this.gridMixer = new GridMixer(cellsFactory, this)
         this.gridSwapper = new GridSwapper(this)
         this.cellsFactory = cellsFactory
+        this.cells = this.InitCells()
+    }
+    
+    InitCells() {
+        let cells = []
+        for(let i = 0; i < this.length; i++){
+            let subCells = []
+            for (let j = 0; j < this.length; j++){
+                subCells.push(new cellBase(i, j ,this.emptyCellValue))
+            }
+            cells.push(subCells)
+        }
+        console.table(cells)
+        return cells
     }
 
-    StartGrid() {
+    StartGrid() { 
         this.gridMixer.MixGrid()
         this.StartEmptyCell()
     }

@@ -8,6 +8,7 @@ export class GridMixer {
     }
     MixCells() {
         let cells = this.cellsFactory.CreateRandomCells(this.grid)
+        console.log(this.grid.cells)
         for (let cell of cells) {
             this.grid.cells[cell.x][cell.y] = cell
         }
