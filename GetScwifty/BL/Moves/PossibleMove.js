@@ -17,6 +17,7 @@ export class PossibleMoves {
         if (length - 1 > emptyCell.y) {
             possibleMoves.push([emptyCell.x, emptyCell.y + 1])
         }
+        console.log(possibleMoves)
         return possibleMoves
     }
 }
