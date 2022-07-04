@@ -1,7 +1,8 @@
 export class GridController {
 
-    constructor (gameLogic, starter) {
-        this.gameLogic = gameLogic
+    constructor (gameLogicFactory, starter) {
+        this.gameLogicFactory = gameLogicFactory
+        this.gameLogic = null
         this.starter = starter
     }
     Start() {
@@ -13,7 +14,9 @@ export class GridController {
         )
     }
     StartGrid(length) {
+        this.gameLogic = this.gameLogicFactory.CreateGame()
         this.gameLogic.StartGame(length)
+        this.starter.gridView.DeleteGrid()
         this.starter.Start(this.gameLogic.GetGrid())
     }
 

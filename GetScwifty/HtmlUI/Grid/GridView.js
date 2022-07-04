@@ -14,4 +14,9 @@ export class GridView {
             }
         }
     }
+
+    DeleteGrid() {
+        let container = document.getElementById('container')
+        container.innerHTML = ''  
+    }
 }
