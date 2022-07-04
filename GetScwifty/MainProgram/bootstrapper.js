@@ -6,6 +6,7 @@ export class bootstrapper {
         let length = 4
         let factory = new CellFactory()
         let game = new GameGrid(length, factory)
+        let gameUI
         return game
     }
 }
