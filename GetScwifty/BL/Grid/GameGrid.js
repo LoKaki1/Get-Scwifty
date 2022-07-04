@@ -22,7 +22,6 @@ export class GameGrid extends GridBase {
             }
             cells.push(subCells)
         }
-        console.table(cells)
         return cells
     }
 
