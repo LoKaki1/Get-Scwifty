@@ -1,13 +1,8 @@
-import { GridController } from "./GridController/GridController"
+import { GridController } from "./GridController/GridController.js"
 
 export class GameController {
-
     constructor (gameLogic) {
         this.gameLogic = gameLogic
-        this.gridController = new GridController(this.gameLogic.ganeGrid)
-    }
-
-    GameControllerStarter(length) {
-        this.gridController.StartGrid(length)
+        this.gridController = new GridController(this.gameLogic)
     }
 }

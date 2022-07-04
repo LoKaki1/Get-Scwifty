@@ -1,10 +1,11 @@
 
 export class GridController {
 
-    constructor(grid) {
-        this.grid = grid 
+    constructor(game) {
+        this.game = game 
     }
+
     StartGrid(length) {
-        return this.grid.CreateBoard(length)
+        return this.game.CreateBoard(length)
     }
 }

@@ -1,4 +1,4 @@
-import { GridBuilder } from "./Grid/GridBuilder"
+import { GridBuilder } from "./Grid/GridBuilder.js"
 
 export class ViewController {
 

@@ -10,7 +10,7 @@ export class GameLogic {
     }
     CreateBoard(length) {
         this.gameGrid = new GameGrid(length, this.cellsFactoy)
-        this.gameGrid.InitilizeGrid()
+        return this.gameGrid.InitilizeGrid()
     }
 
     GetMoves() {
