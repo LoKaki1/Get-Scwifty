@@ -27,7 +27,7 @@ export class GameGrid extends GridBase {
     }
 
     InitilizeGrid() { 
-        this.gridMixer.MixGrid()
+        this.gridMixer.MixCells()
         this.StartEmptyCell()
     }
     

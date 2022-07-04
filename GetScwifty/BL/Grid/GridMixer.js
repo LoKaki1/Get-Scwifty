@@ -1,6 +1,3 @@
-
-import { cellBase } from "../../Common/GridCommon/cellbase.js"
-
 export class GridMixer {
     constructor (cellsFactory, Grid) {
         this.cellsFactory = cellsFactory
@@ -12,8 +9,5 @@ export class GridMixer {
         for (let cell of cells) {
             this.grid.cells[cell.x][cell.y] = cell
         }
-    }
-    MixGrid() {
-        this.MixCells()
     }
 }
