@@ -1,7 +1,7 @@
 import { GridSize } from "./GridSize.js";
 import { GridView } from "./GridView.js";
 
-export class Starter {
+export class GridStarter {
     constructor() {
         this.gridSize = new GridSize()
         this.gridView = new GridView()

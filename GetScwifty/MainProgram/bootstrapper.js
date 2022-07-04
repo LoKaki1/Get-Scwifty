@@ -1,6 +1,6 @@
 import { CellFactory }  from '../Common/GridCommon/CreateRandomCellFactory.js'
 import { GridController } from '../ViewController/Grid/GridController.js'
-import { Starter } from '../HtmlUI/Grid/Starter.js'
+import { Starter } from '../HtmlUI/Grid/GridStarter.js'
 import { GameFactory } from '../BL/GameFactory.js'
 
 export class bootstrapper {

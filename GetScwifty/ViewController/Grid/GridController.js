@@ -15,8 +15,7 @@ export class GridController {
     }
     StartGrid(length) {
         this.gameLogic = this.gameLogicFactory.CreateGame()
-        this.gameLogic.StartGame(length)
-        
+        this.gameLogic.StartGame(length)       
         this.starter.Start(this.gameLogic.GetGrid())
     }
 }
