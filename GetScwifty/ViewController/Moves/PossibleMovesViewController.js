@@ -6,7 +6,7 @@ export class PossibleMovesViewController {
 
     ShowPossibleMoves(game) {
         let possibleMoves = game.GetMoves()
-        this.possibleMovesView.ViewMoves(possibleMoves, game.gameGrid.length) 
+        this.possibleMovesView.ViewMoves(possibleMoves, game.gameGrid.length, game) 
     }
 
     PossibleMovesListener(game) {
