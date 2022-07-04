@@ -7,9 +7,7 @@ export class MovesController {
         console.log(`hi - ${this.possibleMovesViewController}`)
     }
 
-    Start(game) {
-        console.log(game)
-        console.log(`hi - ${this}`)
-        this.possibleMovesViewController.Start(game)
+    MoveListener(game) {
+        this.possibleMovesViewController.PossibleMovesListener(game)
     }
 }

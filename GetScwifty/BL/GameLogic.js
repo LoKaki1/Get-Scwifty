@@ -8,7 +8,7 @@ export class GameLogic {
         this.moves = new PossibleMoves()
         this.cellsFactoy = cellsFactoy
     }
-    StartGameLogic(length) {
+    CreateBoard(length) {
         this.gameGrid = new GameGrid(length, this.cellsFactoy)
         this.gameGrid.InitilizeGrid()
     }

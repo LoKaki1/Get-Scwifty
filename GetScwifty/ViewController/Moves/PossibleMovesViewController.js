@@ -6,10 +6,11 @@ export class PossibleMovesViewController {
 
     ShowPossibleMoves(game) {
         let possibleMoves = game.GetMoves()
+        console.log(possibleMoves)
         this.movesView.ViewMoves(possibleMoves) 
     }
 
-    Start(game) {
+    PossibleMovesListener(game) {
         // Think about giving the grid instead
         this.movesView.AddListenerToCell(game.gameGrid.emptyCell, () => {this.ShowPossibleMoves(game)})
     }

@@ -11,7 +11,7 @@ export class CellCreatorHelper {
     }
     insertCellIfUniqueValue(cells, cellValues, x, y, cellValue){
         if(cellValues.indexOf(cellValue) === -1) {
-            insertCell(cells, cellValues, x, y, cellValue)
+            this.insertCell(cells, cellValues, x, y, cellValue)
             return true
         } 
         return false

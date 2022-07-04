@@ -9,6 +9,7 @@ export class GridController {
     StartGrid() {
         let length = this.starter.GridSizeStarter()
         this.gameLogic = this.gameLogicFactory.CreateGame()
-        this.gameLogic.StartGame(length) 
+        this.gameLogic.CreateBoard(length) 
+        this.starter.PrintGridOnScreen(this.gameLogic.gameGrid)
     }
 }

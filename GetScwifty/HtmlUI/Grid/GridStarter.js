@@ -10,7 +10,7 @@ export class GridStarter {
         return this.gridSize.GetSize()
     }
 
-    Start(grid) {
+    PrintGridOnScreen(grid) {
         this.gridView.DeleteGrid()
         this.gridView.BuildGrid(grid)
     }
