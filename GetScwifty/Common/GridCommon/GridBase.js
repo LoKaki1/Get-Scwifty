@@ -1,4 +1,4 @@
-const EMPTY_CELL = 'EMPTY'
+const EMPTY_CELL = ''
 export class GridBase {
     constructor(length) {
         this.emptyCellValue = EMPTY_CELL

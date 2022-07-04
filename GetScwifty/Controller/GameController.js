@@ -5,6 +5,6 @@ export class GameController {
     constructor (gameLogic) {
         this.gameLogic = gameLogic
         this.gridController = new GridController(this.gameLogic)
-        this.moveController = new MoveController(gameLogic.mover)
+        this.moveController = new MoveController(this.gameLogic.mover)
     }
 }

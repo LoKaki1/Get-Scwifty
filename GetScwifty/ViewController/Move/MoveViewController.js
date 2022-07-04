@@ -1,19 +1,25 @@
 export class MoveViewController {
 
-    constructor(moveController, gridBuilder) {
-        this.moveController = moveController
+    constructor(gridBuilder) {
         this.gridBuilder = gridBuilder
         this.gridContainer = document.getElementById('container')
     }
 
-    ConnectSwapCells() {
+    ConnectSwapCells(mover) {
         let cells = this.gridContainer.children
+        let counter = 0 
         for (let cell of cells){ 
             cell.addEventListener('click', () => {
-                this.moveController.SwapCells({x: 1, y: 2})
-                this.gridBuilder.RebuildGrid()
+                this.SwapCellsView(mover, cell)
+                mover.SwapCells({x: cell.value.x, y: cell.value.y})
             })
+            counter ++
         }
+    }
+
+    SwapCellsView(mover, cell) {
+        mover.SwapCells({x: cell.value.x, y: cell.value.y})
+        this.gridBuilder.RebuildGrid()
     }
 
 }

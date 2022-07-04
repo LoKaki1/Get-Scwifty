@@ -16,6 +16,7 @@ export class GridBuilder {
             for (let cell of cellRow) {
                 let cellChild = document.createElement('div')
                 cellChild.className = 'cell-item'
+                cellChild.value = cell
                 cellChild.innerHTML = cell.value
                 this.gridContainer.appendChild(cellChild)
             }
@@ -31,10 +32,4 @@ export class GridBuilder {
         this.BuildGrid()
     }
 
-    ConnectToButton() {
-        let button = document.getElementById('start-grid')
-        button.addEventListener('click', () => {
-            this.RebuildGrid()
-        })
-    }
 }

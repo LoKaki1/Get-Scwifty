@@ -1,7 +1,7 @@
 import { GridBase } from '../../Common/GridCommon/GridBase.js'
 import { cellBase } from '../../Common/GridCommon/cellbase.js'
 import { GridMixer } from './GridMixer.js'
-import { Swapper } from '../Swapper.js'
+import { Swapper } from './Swapper.js'
 export class GameGrid extends GridBase {
 
     constructor (length, cellsFactory) {
@@ -33,6 +33,6 @@ export class GameGrid extends GridBase {
     
     StartEmptyCell() {
         let generatedCell = this.cellsFactory.RandomCell(this)
-        this.gridSwapper.SwapCells(this.cells[generatedCell.x][generatedCell.y], this.emptyCell)
+        this.gridSwapper.SwapCells(this.cells[generatedCell.x][generatedCell.y], this.emptyCell, this)
     }
 }
