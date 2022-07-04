@@ -8,13 +8,11 @@ export class GameLogic {
         this.moves = new PossibleMoves()
         this.cellsFactoy = cellsFactoy
     }
-    StartGame(length) {
+    StartGameLogic(length) {
         this.gameGrid = new GameGrid(length, this.cellsFactoy)
-        this.gameGrid.StartGrid()
+        this.gameGrid.InitilizeGrid()
     }
-    GetGrid() {
-        return this.gameGride
-    }
+
     GetMoves() {
         let possibleMoves = this.moves.GetPossibleMoves(this.gameGrid)
         return possibleMoves

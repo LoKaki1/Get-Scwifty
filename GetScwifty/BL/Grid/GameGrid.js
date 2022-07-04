@@ -26,17 +26,13 @@ export class GameGrid extends GridBase {
         return cells
     }
 
-    StartGrid() { 
+    InitilizeGrid() { 
         this.gridMixer.MixGrid()
         this.StartEmptyCell()
-        return this
     }
     
     StartEmptyCell() {
         let generatedCell = this.cellsFactory.RandomCell(this)
         this.gridSwapper.SwapWithEmptyCell(this.cells[generatedCell.x][generatedCell.y])
-    }
-    GetCells(){
-        return this.cells
     }
 }
