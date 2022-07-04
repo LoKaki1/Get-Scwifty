@@ -11,5 +11,4 @@ export class Mover {
     Swap(cell) {
         this.swapper.SwapWithEmptyCell(cell)
     }
-
 }

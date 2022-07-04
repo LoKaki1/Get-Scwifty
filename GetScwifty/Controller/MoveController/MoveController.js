@@ -1,7 +1,11 @@
 export class MoveController {
 
-    constructor(params) {
-        
+    constructor(mover) {
+        this.mover = mover
+    }
+
+    SwapCells(cell) {
+        this.mover.Swap(cell)
     }
 
 }

@@ -26,11 +26,15 @@ export class GridBuilder {
         this.gridContainer.innerHTML = ''
     }
 
+    RebuildGrid(){
+        this.DeleteGrid()
+        this.BuildGrid()
+    }
+
     ConnectToButton() {
         let button = document.getElementById('start-grid')
         button.addEventListener('click', () => {
-            this.DeleteGrid()
-            this.BuildGrid()
+            this.RebuildGrid()
         })
     }
 }
