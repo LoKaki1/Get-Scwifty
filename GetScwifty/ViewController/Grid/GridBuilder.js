@@ -1,10 +1,14 @@
+import { GridInput } from "./GridInput"
+
 export class GridBuilder {
     constructor(gridController) {
         this.gridController = gridController
+        this.gridInput = new GridInput()
     }
 
     BuildGrid() {
-        grid = this.gridController.StartGrid()
+        length = this.gridInput.GetLength()
+        grid = this.gridController.StartGrid(length)
         let gridContainer = document.getElementById('container')
         for (let cellRow of grid.cells) {
             for (let cell of cellRow) {

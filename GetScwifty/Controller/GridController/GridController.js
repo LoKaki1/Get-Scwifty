@@ -1,11 +1,10 @@
-import { StartGrid } from "./StartGrid.js";
 
 export class GridController {
-    constructor() {
-        this.startGrid = new StartGrid()
-    }   
 
-    StartGrid(grid) {
-        return this.startGrid.CreateGrid(grid)
+    constructor(grid) {
+        this.grid = grid 
+    }
+    StartGrid(length) {
+        return this.grid.CreateBoard(length)
     }
 }

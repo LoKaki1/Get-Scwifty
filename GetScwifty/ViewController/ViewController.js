@@ -7,7 +7,7 @@ export class ViewController {
         this.GridBuilder = new GridBuilder(gameController.gridController)
     }
 
-    ConnectButtonToFunctions() {
+    ConnectButtonToFunctions() {     
         this.GridBuilder.ConnectToButton()
     }
 
