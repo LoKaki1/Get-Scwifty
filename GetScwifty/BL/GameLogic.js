@@ -1,9 +1,11 @@
 import { GameGrid } from "./Grid/GameGrid.js"
+import { PossibleMoves } from "./Moves/PossibleMove.js"
 
 export class GameLogic {
 
     constructor(cellsFactoy) {
         this.gamGrid = null
+        this.moves = new PossibleMoves()
         this.cellsFactoy = cellsFactoy
     }
     StartGame(length) {
@@ -12,5 +14,9 @@ export class GameLogic {
     }
     GetGrid() {
         return this.gamGrid
+    }
+    GetMoves() {
+        let possibleMoves = this.moves.GetPossibleMoves(this.gamGrid)
+        return possibleMoves
     }
 }
