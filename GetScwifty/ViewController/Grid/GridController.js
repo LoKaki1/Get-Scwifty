@@ -5,17 +5,12 @@ export class GridController {
         this.gameLogic = null
         this.starter = starter
     }
-    Start() {
-        this.starter.AddEventToStartButton(() => {
-            let length = this.starter.GridSizeStarter()
-            console.log('clicked')
-            this.StartGrid(length)
-        }
-        )
-    }
-    StartGrid(length) {
+
+    StartGrid() {
+        let length = this.starter.GridSizeStarter()
         this.gameLogic = this.gameLogicFactory.CreateGame()
-        this.gameLogic.StartGame(length)       
-        this.starter.Start(this.gameLogic.GetGrid())
+        this.gameLogic.StartGame(length)    
+        console.log(this.gameLogic.gameGrid)   
+        this.starter.Start(this.gameLogic.gameGrid)
     }
 }
