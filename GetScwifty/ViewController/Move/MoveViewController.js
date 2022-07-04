@@ -7,7 +7,7 @@ export class MoveViewController {
 
     ConnectSwapCells(mover) {
         let cells = this.gridContainer.children
-        for (let cell of cells){ 
+        for (let cell of cells) { 
             cell.addEventListener('click', () => {
                 this.SwapCellsView(mover, cell)
             })
