@@ -2,7 +2,7 @@ export class GridView {
     constructor () {
 
     }
-
+    
     BuildGrid (grid) {
         let container = document.getElementById('container')
         container.style.setProperty('--grid-rows', grid.length);
