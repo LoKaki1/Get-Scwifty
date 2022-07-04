@@ -7,11 +7,14 @@ export class GridBuilder {
         this.gridContainer = document.getElementById('container')
     }
 
-    BuildGrid() {
-        let length = this.gridInput.GetLength()
-        let grid = this.gridController.StartGrid(length)
-        this.gridContainer.style.setProperty('--grid-rows', length);
-        this.gridContainer.style.setProperty('--grid-cols', length);
+    BuildGrid(grid = null) {
+        if (grid == null){
+            let length = this.gridInput.GetLength()
+            grid = this.gridController.StartGrid(length)
+            this.gridContainer.style.setProperty('--grid-rows', length);
+            this.gridContainer.style.setProperty('--grid-cols', length);
+        }
+
         for (let cellRow of grid.cells) {
             for (let cell of cellRow) {
                 let cellChild = document.createElement('div')
@@ -27,9 +30,9 @@ export class GridBuilder {
         this.gridContainer.innerHTML = ''
     }
 
-    RebuildGrid(){
+    RebuildGrid(grid = null){
         this.DeleteGrid()
-        this.BuildGrid()
+        this.BuildGrid(grid)
     }
 
 }
