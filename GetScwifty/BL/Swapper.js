@@ -1,4 +1,4 @@
-export class GridSwapper {
+export class Swapper {
 
     constructor(grid) {
         this.grid = grid

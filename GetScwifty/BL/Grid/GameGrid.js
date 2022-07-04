@@ -1,14 +1,14 @@
 import { GridBase } from '../../Common/GridCommon/GridBase.js'
 import { cellBase } from '../../Common/GridCommon/cellbase.js'
 import { GridMixer } from './GridMixer.js'
-import { GridSwapper } from './GridSwapper.js'
+import { Swapper } from '../Swapper.js'
 export class GameGrid extends GridBase {
 
     constructor (length, cellsFactory) {
         super(length)
         this.emptyCell = new cellBase(length - 1, length - 1, this.emptyCellValue)
         this.gridMixer = new GridMixer(cellsFactory, this)
-        this.gridSwapper = new GridSwapper(this)
+        this.gridSwapper = new Swapper(this)
         this.cellsFactory = cellsFactory
         this.cells = this.InitCells()
     }
