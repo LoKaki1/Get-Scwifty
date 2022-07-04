@@ -1,5 +1,5 @@
 export class GridView {
-    
+
     BuildGrid (grid) {
         let container = document.getElementById('container')
         container.style.setProperty('--grid-rows', grid.length);
