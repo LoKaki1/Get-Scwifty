@@ -1,7 +1,4 @@
 export class GridView {
-    constructor () {
-
-    }
     
     BuildGrid (grid) {
         let container = document.getElementById('container')
