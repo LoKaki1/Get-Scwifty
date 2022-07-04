@@ -5,7 +5,7 @@ import { GridView } from '../HtmlUI/Grid/GridView.js'
 
 export class bootstrapper {
     init() {
-        let length = 4
+        let length = document.getElementById('grid-size').value
         let factory = new CellFactory()
         let game = new GameGrid(length, factory)
         let htmlGrid = new GridView()
